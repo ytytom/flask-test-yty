@@ -5,10 +5,11 @@ import json
 
 logger = loggers()
 
+
 # parser = reqparse.RequestParser()
 # parser.add_argument("id", type=str, required=True, trim=True)
 
 class test(Resource):
-    def get(self):
-        logger.info("info message")
-        return {"status": True, "message": "start task success !" ,"data": "result"}
+  def get(self):
+    logger.info("info message")
+    return {"status": True, "message": "start task success !", "data": "result"}
