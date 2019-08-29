@@ -8,7 +8,7 @@ import requests
 import re
 import string
 import uuid
-from .AutoCreateHost import Zabbix_Api as Api
+
 
 parser = reqparse.RequestParser()
 parser.add_argument("item_id", type=str, default="", action="append", trim=True)

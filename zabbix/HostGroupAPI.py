@@ -2,6 +2,7 @@
 from flask_restful import Resource, reqparse, request
 from common.log import loggers
 from .ZabbixAPI import Zabbix_Api
+import json
 
 logger = loggers()
 
@@ -26,6 +27,12 @@ class HostGroupAbout(Zabbix_Api):
     if len(args) == 0:
       params = {
         "output": ["name"],
+        "sortfield": "groupid",
+        "excludeSearch": True, #匹配到除了Linux servers外的群组
+        "search":{
+          "name": "Linux servers"
+        },
+        "selectHosts": ["name"],
       }
     else:
       params = {
@@ -34,9 +41,13 @@ class HostGroupAbout(Zabbix_Api):
           "name": args
         },
         "selectHosts": ["name"],
+        "sortfield": "groupid",
+        # "sortfield": "groupid"
       }
     elements = self.common_action(auth, method=method, params=params)
     logger.info("查找所有主机组: ,%s", elements, )
+    for i in elements:
+      i["hosts"] = len(i["hosts"])
     return elements
 
 
@@ -46,15 +57,21 @@ class HostGroupAbout(Zabbix_Api):
     #依据群组名返回是否存在主机组
     method = "hostgroup.get"
     params = {
-      "output": "extend",
+      "output": "groupid",
       "filter": {
         "name": hgname
       }
     }
     elements = self.common_action(auth,method=method, params=params)
+
     ele_num = len(elements)
+
     logger.info("判断当前主机组是否存在的信息 (0代表不存在)%s , 对应的主机名称为: ,%s", ele_num,hgname)
-    return ele_num
+    groupid = elements[0]["groupid"]
+    if ele_num == 0:
+      return 0
+    else:
+      return groupid
 
 
   def Hostgroup_add(self,  auth,hgname):
@@ -80,6 +97,22 @@ class HostGroupAbout(Zabbix_Api):
       tmp = "the name of hostgroup has exist"
     return tmp
 
+  def UseGroupnameGetid(self,auth,hgname):
+    method = "hostgroup.get"
+    params= {
+      "output": "groupid",
+      "filter": {
+        "name": hgname
+      }
+    }
+    flags = self.Hostgroup_ifhas(auth, hgname)
+
+    try:
+      hg_information = self.common_action(auth, method=method, params=params)
+      tmp = hg_information['groupids'][0]
+      return tmp
+    except Exception as e:
+      return e
 
 
 class GetAllHostGroup(Resource):
@@ -101,7 +134,16 @@ class GetAllHostGroup(Resource):
 
     return {"code":200,"message":"请求成功","result":AllHost}
 
+  def post(self):
 
+    hostgroups = json.loads(request.data)["group_name"]
+    # hostgroups = request.form["group_name"]
+    print(hostgroups)
+    Api = Zabbix_Api()
+    host_group = HostGroupAbout()
+    auth = Api.get_auth()
+    AllHost = host_group.get_hostgroup(auth, hostgroups)
+    return  {"code":200,"message":"请求成功","result":AllHost}
 
 class CreateGroup(Resource):
   def get(self):

@@ -10,7 +10,7 @@ from ops.emergencyAlertDetail import emergencyAlertDetail
 from common.healthy import healthy
 from zabbix.HostGroupAPI import GetAllHostGroup,LinkTemplate_G,CreateGroup
 
-from zabbix.HostAPI import GetAllHost,CreateHost,JoinGroup,LinkTemplate,ChangeStatus
+from zabbix.HostAPI import GetAllHost,CreateHost,JoinGroup,LinkTemplate,ChangeStatus,UseGroupidGetHost,GetUndefindHost
 
 from zabbix.TemplateAPI import GetTemplate
 # from ops.cobblerList import cobblerList
@@ -39,6 +39,8 @@ api.add_resource(CreateGroup,"/group/CreateGroup")
 
 ##host about##
 api.add_resource(GetAllHost,"/host/GetHost")
+api.add_resource(GetUndefindHost,"/host/GetUndefindHost")
+api.add_resource(UseGroupidGetHost,"/host/UseGroupidGetHost")
 api.add_resource(CreateHost,"/host/CreateHost")
 api.add_resource(JoinGroup,"/host/JoinGroup")
 api.add_resource(LinkTemplate,"/host/LinkTemplate")
