@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="773f64f8-561d-47bb-a363-ec1a28b0fb95" name="flask-test-yty" url="http://172.20.13.76">
+        <fileTransfer host="172.20.13.76" port="22" rootFolder="/data/yty" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
