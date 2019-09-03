@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80a092df-dce2-4342-8c04-37f69c40590e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/flask-test-yty.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="80a092df-dce2-4342-8c04-37f69c40590e" name="Default Changelist" comment="监控集成">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PLAN.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/common.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/logger.conf" beforeDir="false" afterPath="$PROJECT_DIR$/common/logger.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask-yty.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask-yty.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/emergency.py" beforeDir="false" afterPath="$PROJECT_DIR$/ops/emergency.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ops/emergencyScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ops/emergencyScheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zabbix/AddItemTragger.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/AddItemTragger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zabbix/ChangeItemdelay.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/ChangeItemdelay.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/thread-count.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/thread-count.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zabbix/HostAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/HostAPI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zabbix/HostGroupAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/HostGroupAPI.py" afterDir="false" />
     </list>
@@ -34,7 +22,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/flask_test_yty$ZabbixCommonAPI.coverage" NAME="ZabbixCommonAPI Coverage Results" MODIFIED="1565230229546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zabbix" />
-    <SUITE FILE_PATH="coverage/flask_test_yty$flask_test_yty.coverage" NAME="flask-test-yty Coverage Results" MODIFIED="1566973315583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_test_yty$flask_test_yty.coverage" NAME="flask-test-yty Coverage Results" MODIFIED="1567488553028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask_test_yty$threading_count.coverage" NAME="threading-count Coverage Results" MODIFIED="1565857527209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/flask_test_yty$thread_count.coverage" NAME="thread-count Coverage Results" MODIFIED="1565857098683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/flask_test_yty$zabbixabout.coverage" NAME="zabbixabout Coverage Results" MODIFIED="1565512133379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zabbix" />
@@ -44,24 +32,25 @@
     <session id="-1733342872">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.41" value="1" />
+          <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.82" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="README" value="1" />
           <entry key="conf" value="2" />
-          <entry key="log" value="2" />
+          <entry key="log" value="3" />
           <entry key="md" value="5" />
-          <entry key="py" value="78" />
+          <entry key="py" value="80" />
           <entry key="pyi" value="1" />
           <entry key="sql" value="1" />
         </counts>
@@ -69,8 +58,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="5" />
-          <entry key="Python" value="78" />
+          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="Python" value="80" />
           <entry key="PythonStub" value="1" />
           <entry key="SQL" value="1" />
         </counts>
@@ -81,7 +70,7 @@
           <entry key="dummy" value="41" />
           <entry key="log" value="3" />
           <entry key="md" value="64" />
-          <entry key="py" value="7764" />
+          <entry key="py" value="8757" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
@@ -89,7 +78,7 @@
         <counts>
           <entry key="Markdown" value="64" />
           <entry key="PLAIN_TEXT" value="76" />
-          <entry key="Python" value="7764" />
+          <entry key="Python" value="8757" />
         </counts>
       </usages-collector>
     </session>
@@ -99,8 +88,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+              <folding>
+                <element signature="e#23#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,29 +105,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zabbix/HostAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="171" column="19" lean-forward="true" selection-start-line="171" selection-start-column="19" selection-end-line="171" selection-end-column="19" />
+            <state relative-caret-position="-1042">
+              <caret line="361" lean-forward="true" selection-start-line="361" selection-end-line="361" />
               <folding>
                 <element signature="e#15#26#0" expanded="true" />
-                <marker date="1566986198519" expanded="true" signature="4083:4136" ph="..." />
-                <marker date="1566986198519" expanded="true" signature="4180:4559" ph="..." />
-                <marker date="1566986198519" expanded="true" signature="4603:4941" ph="..." />
-                <marker date="1566986198519" expanded="true" signature="6988:7269" ph="..." />
-                <marker date="1566986198519" expanded="true" signature="7313:8043" ph="..." />
-                <marker date="1566986198519" expanded="true" signature="8849:8885" ph="..." />
+                <marker date="1567498169308" expanded="true" signature="4078:4083" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PLAN.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="231">
-                <caret line="11" selection-start-line="11" selection-end-line="11" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -143,12 +118,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zabbix/HostGroupAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2394">
-              <caret line="117" column="21" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
               <folding>
                 <element signature="e#15#68#0" expanded="true" />
-                <marker date="1566892725934" expanded="true" signature="1479:1483" ph="..." />
-                <marker date="1566892725934" expanded="true" signature="2892:2895" ph="..." />
+                <marker date="1567416538275" expanded="true" signature="1479:1483" ph="..." />
+                <marker date="1567416538275" expanded="true" signature="2668:2671" ph="..." />
+                <marker date="1567416538275" expanded="true" signature="3584:3587" ph="..." />
+                <marker date="1567416538275" expanded="true" signature="3698:3711" ph="..." />
               </folding>
             </state>
           </provider>
@@ -157,32 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flask-yty.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36813">
-              <caret line="1753" column="92" selection-start-line="1753" selection-start-column="92" selection-end-line="1753" selection-end-column="92" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zabbix/ChangeItemdelay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#15#68#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-              <folding>
-                <element signature="e#23#46#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="214">
+              <caret line="2440" column="66" selection-start-line="2440" selection-start-column="66" selection-end-line="2440" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -224,6 +177,7 @@
       <find>temp_name</find>
       <find>_wait_for_tstate_lock</find>
       <find>according</find>
+      <find>UseHostidGetHostname</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -248,7 +202,6 @@
         <option value="$PROJECT_DIR$/common/healthy.py" />
         <option value="$PROJECT_DIR$/zabbix/zabbixabout.py" />
         <option value="$PROJECT_DIR$/zabbix/hostgroupabout.py" />
-        <option value="$PROJECT_DIR$/test/thread-count.py" />
         <option value="$PROJECT_DIR$/test/thread-count-wait1.py" />
         <option value="$PROJECT_DIR$/test/threading-count.py" />
         <option value="$PROJECT_DIR$/test/zabbixabout.py" />
@@ -261,10 +214,11 @@
         <option value="$PROJECT_DIR$/zabbix/TemplateAPI.py" />
         <option value="$PROJECT_DIR$/zabbix/AddItemTragger.py" />
         <option value="$PROJECT_DIR$/zabbix/ChangeItemdelay.py" />
-        <option value="$PROJECT_DIR$/router.py" />
-        <option value="$PROJECT_DIR$/zabbix/HostGroupAPI.py" />
         <option value="$PROJECT_DIR$/zabbix/ZabbixAPI.py" />
         <option value="$PROJECT_DIR$/PLAN.md" />
+        <option value="$PROJECT_DIR$/test/thread-count.py" />
+        <option value="$PROJECT_DIR$/zabbix/HostGroupAPI.py" />
+        <option value="$PROJECT_DIR$/router.py" />
         <option value="$PROJECT_DIR$/zabbix/HostAPI.py" />
       </list>
     </option>
@@ -276,10 +230,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="148" />
-    <option name="y" value="243" />
-    <option name="width" value="1305" />
-    <option name="height" value="750" />
+    <option name="x" value="34" />
+    <option name="y" value="98" />
+    <option name="width" value="1446" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -517,26 +471,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="148" y="243" width="1305" height="750" extended-state="0" />
+    <frame x="34" y="98" width="1446" height="840" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26987952" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24603175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.18438178" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36260623" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.20616883" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.20525657" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -624,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/thread-count.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2018.2/system/python_stubs/-265008591/_thread.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -693,9 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="819">
           <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,10 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#607#964#0" />
-            <marker date="1566185458293" expanded="true" signature="61:62" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -721,9 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="34" column="9" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -738,9 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding>
-            <element signature="e#23#76#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -765,15 +699,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#23#76#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/ChangeItemdelay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="42">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#15#68#0" expanded="true" />
@@ -781,26 +715,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zabbix/ZabbixAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="e#15#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask-yty.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="1753" column="92" selection-start-line="1753" selection-start-column="92" selection-end-line="1753" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
+        <state relative-caret-position="63">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding>
             <element signature="e#23#46#0" expanded="true" />
@@ -808,57 +725,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zabbix/HostGroupAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-351">
-          <caret line="117" column="21" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="21" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-            <marker date="1566892725934" expanded="true" signature="1479:1483" ph="..." />
-            <marker date="1566892725934" expanded="true" signature="2892:2895" ph="..." />
-            <marker date="1566892725934" expanded="true" signature="2892:3665" ph="..." />
-            <marker date="1566892725934" expanded="true" signature="3836:3870" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PLAN.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="231">
-            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <caret line="11" selection-start-line="11" selection-end-line="11" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/thread-count.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zabbix/ZabbixAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#15#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding>
+            <element signature="e#23#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-yty.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="2440" column="66" selection-start-line="2440" selection-start-column="66" selection-end-line="2440" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zabbix/HostGroupAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+          <folding>
+            <element signature="e#15#68#0" expanded="true" />
+            <marker date="1567416538275" expanded="true" signature="1479:1483" ph="..." />
+            <marker date="1567416538275" expanded="true" signature="2668:2671" ph="..." />
+            <marker date="1567416538275" expanded="true" signature="3584:3587" ph="..." />
+            <marker date="1567416538275" expanded="true" signature="3698:3711" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/HostAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="160" column="44" lean-forward="true" selection-start-line="160" selection-start-column="44" selection-end-line="160" selection-end-column="44" />
+        <state relative-caret-position="-1042">
+          <caret line="361" lean-forward="true" selection-start-line="361" selection-end-line="361" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
-            <element signature="e#685#1299#0" />
-            <element signature="e#1353#2131#0" />
-            <element signature="e#2171#2964#0" />
-            <element signature="e#2574#3107#0" />
-            <element signature="e#2391#2879#0" />
-            <marker date="1566986198519" expanded="true" signature="4083:4136" ph="..." />
-            <marker date="1566986198519" expanded="true" signature="4180:4559" ph="..." />
-            <marker date="1566986198519" expanded="true" signature="4603:4941" ph="..." />
-            <marker date="1566986198519" expanded="true" signature="6988:7269" ph="..." />
-            <marker date="1566986198519" expanded="true" signature="7313:8043" ph="..." />
-            <marker date="1566986198519" expanded="true" signature="8849:8885" ph="..." />
+            <marker date="1567498169308" expanded="true" signature="4078:4083" ph="..." />
           </folding>
         </state>
       </provider>

@@ -10,7 +10,7 @@ logger = loggers()
 
 parser = reqparse.RequestParser()
 parser.add_argument("temp_name", type=str, default="CSLC Template OS Linux", trim=True)
-parser.add_argument("business_name", type=str, default="", trim=True)
+parser.add_argument("group_name", type=str, default="", trim=True)
 parser.add_argument("host_list", type=str, action="append", trim=True, help="host_list cannot be blank!")
 parser.add_argument("host_name", type=str, action="append", trim=True, help="host_name cannot be blank!")
 
@@ -27,7 +27,7 @@ class HostAbout(Zabbix_Api):
         "output": ["name", "status", "available"],
         "selectInterfaces": ["ip"],
         "selectParentTemplates": ["name"],
-
+        "selectGroups": ["name"],
       }
     else:
       host_name = args
@@ -38,6 +38,7 @@ class HostAbout(Zabbix_Api):
         },
         "selectInterfaces": ["ip"],
         "selectParentTemplates": ["name"],
+        "selectGroups": ["name"],
 
       }
 
@@ -45,6 +46,11 @@ class HostAbout(Zabbix_Api):
 
     for i in host_info:
       i["ip"] = i["interfaces"][0]["ip"]
+      i["groupname"] = i["groups"][0]["name"]
+      i.pop("interfaces")
+      i.pop("groups")
+      i["hostname"] = i.pop("name")
+      i["IPaddress"] = i.pop("ip")
 
     return host_info
 
@@ -88,14 +94,16 @@ class HostAbout(Zabbix_Api):
     method = "host.get"
     params = {
       "output": ["name", "status", "available", "ip"],
-      "filter": {
-        "groupids": groupid
-      },
+      "groupids": groupid,
+      # "filter": {
+      #   "groupids": groupid
+      # },
       "selectParentTemplates": ["name"],
       "selectInterfaces": ["ip"]
     }
     host_info = self.common_action(auth, method=method, params=params)
-
+    if len(host_info)==0:
+      return "该业务组内无机器"
     differntable = []
     for i in host_info:
       i["ip"] = i["interfaces"][0]["ip"]
@@ -116,8 +124,7 @@ class HostAbout(Zabbix_Api):
 
 
 
-
-  def GetUndefindHost(self, auth):
+  def GetUndefindHost(self,auth):
     method = "host.get"
     params = {
       "output": ["name", "status", "available", "ip"],
@@ -131,7 +138,7 @@ class HostAbout(Zabbix_Api):
     j = 0
     for i in host_info:
       i["description"] = i["interfaces"][0]["ip"]
-      i["title"]=i["name"]
+      i["title"] = i["name"]
       i["key"] = str(j)
       j += 1
       i.pop("name")
@@ -139,30 +146,49 @@ class HostAbout(Zabbix_Api):
       i.pop("status")
       i.pop("parentTemplates")
       i.pop("hostid")
-      if i["available"] == 1:
-        i["disabled"] = True
-      else:
+      if i["available"] == "1":
         i["disabled"] = False
+      else:
+        i["disabled"] = True
       i.pop("available")
       # i.pop("parentTemplates","interfaces")
     return host_info
 
-  def UseHostidUpdateGroup(self,auth,groupid,*args):
+
+  def GetGrouplessHost(self, auth):
+    method = "host.get"
+    params = {
+      "output": ["name", "status", "available", "ip"],
+      "filter": {
+        "groupids": "2"
+      },
+      "selectParentTemplates": ["name"],
+      "selectInterfaces": ["ip"]
+    }
+    host_info = self.common_action(auth, method=method, params=params)
+
+    for i in host_info:
+      i["ip"] = i["interfaces"][0]["ip"]
+      i.pop("interfaces")
+      i.pop("parentTemplates")
+      # i.pop("parentTemplates","interfaces")
+    return host_info
+
+  def UseHostidUpdateGroup(self,auth,group_id,*args):
     method = "host.massupdate"
     params = {
-      "output":"extend",
-      "groups": groupid,
-      "hosts": [*args]
+      "hosts": [*args],
+      "groups": group_id
     }
     host_info = self.common_action(auth, method=method, params=params)
     return host_info
 
 
-  def HostUpdate_G(self,auth,groupid,*args):
-    method = "host.update"
-    params = {
-
-    }
+  # def HostUpdate_G(self,auth,groupid,*args):
+  #   method = "host.update"
+  #   params = {
+  #
+  #   }
 
   def UseHostnameGetHostid(self, auth, *args):
     method = "host.get"
@@ -173,7 +199,10 @@ class HostAbout(Zabbix_Api):
       },
       "selectInterfaces": ["ip"]
     }
+    logger.info("params is %s",params)
+    logger.info("method is %s",method)
     host_info = self.common_action(auth, method=method, params=params)
+
     hostidlist = []
     for i in host_info:
       i["ip"] = i["interfaces"][0]["ip"]
@@ -267,6 +296,9 @@ class UseGroupidGetHost(Resource):
     pass
 
   def post(self):
+    # {
+    #   "group_id":"2"
+    # }
     Api = Zabbix_Api()
     logger.info("Create an API instance")
     auth = Api.get_auth()
@@ -275,7 +307,11 @@ class UseGroupidGetHost(Resource):
     print(Groupid)
     hostaction = HostAbout()
     AllHost = hostaction.UseGroupidGetHost(auth, Groupid)
-    return {"code": 200, "message": "请求成功", "result": AllHost}
+    if AllHost =="该业务组内无机器":
+      return {"code": 201, "message": AllHost, "result": []}
+    else:
+      return {"code": 200, "message": "请求成功", "result": AllHost}
+
 
 
 class GetUndefindHost(Resource):
@@ -286,6 +322,16 @@ class GetUndefindHost(Resource):
     logger.info("Get an auth")
     hostaction = HostAbout()
     AllHost = hostaction.GetUndefindHost(auth)
+    return {"code": 200, "message": "请求成功", "result": AllHost}
+
+class GetGrouplessHost(Resource):
+  def get(self):
+    Api = Zabbix_Api()
+    logger.info("Create an API instance")
+    auth = Api.get_auth()
+    logger.info("Get an auth")
+    hostaction = HostAbout()
+    AllHost = hostaction.GetGrouplessHost(auth)
     return {"code": 200, "message": "请求成功", "result": AllHost}
 
 
@@ -321,6 +367,46 @@ class CreateHost(Resource):
 class ChangeStatus(Resource):
   def get(self):
     return 200
+
+class HostJoinGroup(Resource):
+  def get(self):
+    pass
+  def post(self):
+    # {
+    #   "groupid": "1",
+    #   "hostid": ["xx", "xx", "xxx"]
+    # }
+    group_id = json.loads(request.data)["groupid"]
+    hosts = json.loads(request.data)["hostid"]
+    print(hosts)
+    Api = Zabbix_Api()
+    hostids = []
+
+    for i in hosts:
+      hostid = {}
+      hostid["hostid"]=i
+      hostids.append(hostid)
+    logger.info("Create an API instance")
+    auth = Api.get_auth()
+    logger.info("Get an auth")
+    hostaction = HostAbout()
+    hostupdate = hostaction.UseHostidUpdateGroup(auth, group_id, *hostids)
+
+    #建群组
+    # group_id = hostgroupabout.Hostgroup_add(auth,group_name)
+    #拿hostid
+    # hostaction = HostAbout()
+    # host_id = hostaction.UseHostnameGetHostid(auth,*hosts)
+    # for i in host_id:
+    #   i.pop("name")
+    #   i.pop("interfaces")
+    #   i.pop("ip")
+    #
+    # hostupdate = hostaction.UseHostidUpdateGroup(auth,group_id,*host_id)
+    # hostupdate_hostid = hostupdate["hostids"]
+    # successhostname = hostaction.UseHostidGetHostname(auth,*hostupdate_hostid)
+    return {"group_id":group_id,"hostupdate":hostupdate}
+
 
 
 class JoinGroup(Resource):

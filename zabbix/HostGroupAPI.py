@@ -67,35 +67,27 @@ class HostGroupAbout(Zabbix_Api):
     ele_num = len(elements)
 
     logger.info("判断当前主机组是否存在的信息 (0代表不存在)%s , 对应的主机名称为: ,%s", ele_num,hgname)
-    groupid = elements[0]["groupid"]
+
     if ele_num == 0:
-      return 0
+      return "0"
     else:
+      groupid = elements[0]["groupid"]
       return groupid
 
 
-  def Hostgroup_add(self,  auth,hgname):
+  def Hostgroup_add(self,  auth,group_name):
 
-    #传创建主机组的动作
-    #只有hgname一个参数
+
     method = "hostgroup.create"
     params = {
-      "name": hgname
+      "name": group_name
     }
 
-    flags = self.Hostgroup_ifhas(auth,hgname)
-    #判断主机组是否存在
-    if flags == 0:
-      try:
-        hg_information = self.common_action(auth,method=method, params=params)
-        tmp = hg_information['groupids'][0]
-        return tmp
-      except Exception as e:
-        return e
-
-    else:
-      tmp = "the name of hostgroup has exist"
+    hg_information = self.common_action(auth,method=method, params=params)
+    tmp = hg_information['groupids'][0]
+    print(tmp)
     return tmp
+
 
   def UseGroupnameGetid(self,auth,hgname):
     method = "hostgroup.get"
@@ -145,10 +137,27 @@ class GetAllHostGroup(Resource):
     AllHost = host_group.get_hostgroup(auth, hostgroups)
     return  {"code":200,"message":"请求成功","result":AllHost}
 
-class CreateGroup(Resource):
-  def get(self):
-    return 200
+
+
 
 class LinkTemplate_G(Resource):
   def get(self):
     return 200
+
+
+class CreateGroup(Resource):
+  def get(self):
+    pass
+
+  def post(self):
+    Api = Zabbix_Api()
+    auth = Api.get_auth()
+    group_name = json.loads(request.data)["group_name"]
+    groupablout = HostGroupAbout()
+    group_info = groupablout.Hostgroup_ifhas(auth, group_name)
+    if group_info == "0":
+      create_group = groupablout.Hostgroup_add(auth,group_name)
+      return {"code": 200, "message": "请求成功", "result":{"group_id":create_group,"group_name":group_name}}
+    else:
+      # return  {"code":200,"message":"请求成功","result":group_info}
+      return {"code": 400, "message": "请求失败", "result": "业务组重名"}
