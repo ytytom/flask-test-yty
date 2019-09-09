@@ -373,11 +373,11 @@ class HostJoinGroup(Resource):
     pass
   def post(self):
     # {
-    #   "groupid": "1",
-    #   "hostid": ["xx", "xx", "xxx"]
+    #   "group_id": "1",
+    #   "hosts": ["xx", "xx", "xxx"]
     # }
-    group_id = json.loads(request.data)["groupid"]
-    hosts = json.loads(request.data)["hostid"]
+    group_id = json.loads(request.data)["group_id"]
+    hosts = json.loads(request.data)["hosts"]
     print(hosts)
     Api = Zabbix_Api()
     hostids = []
@@ -389,8 +389,12 @@ class HostJoinGroup(Resource):
     logger.info("Create an API instance")
     auth = Api.get_auth()
     logger.info("Get an auth")
+    hostgroup = HostGroupAbout()
     hostaction = HostAbout()
     hostupdate = hostaction.UseHostidUpdateGroup(auth, group_id, *hostids)
+    hg_information = hostgroup.UseGroupidGetName(auth,group_id)
+    host_id = hostupdate["hostids"]
+    hostname = hostaction.UseHostidGetHostname(auth,*host_id)
 
     #建群组
     # group_id = hostgroupabout.Hostgroup_add(auth,group_name)
@@ -405,7 +409,8 @@ class HostJoinGroup(Resource):
     # hostupdate = hostaction.UseHostidUpdateGroup(auth,group_id,*host_id)
     # hostupdate_hostid = hostupdate["hostids"]
     # successhostname = hostaction.UseHostidGetHostname(auth,*hostupdate_hostid)
-    return {"group_id":group_id,"hostupdate":hostupdate}
+    # return {"group_id":group_id,"hostupdate":hostupdate}
+    return {"code": 200, "message": "请求成功", "result": {"groupname":hg_information,"hostupdate":hostname}}
 
 
 

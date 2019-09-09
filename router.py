@@ -9,11 +9,12 @@ from ops.emergencyAlertDetail import emergencyAlertDetail
 
 from common.healthy import healthy
 from zabbix.HostGroupAPI import GetAllHostGroup,LinkTemplate_G,CreateGroup
-
+from zabbix.ItemAPI import GetIteminfo
 from zabbix.HostAPI import GetAllHost,CreateHost,JoinGroup,LinkTemplate,ChangeStatus,UseGroupidGetHost,\
   GetUndefindHost,HostJoinGroup,GetGrouplessHost
-
+from zabbix.TriggerAPI import GetTrigger
 from zabbix.TemplateAPI import GetTemplate
+from zabbix.TriggerprototypeAPI import GetTriggerprototype
 # from ops.cobblerList import cobblerList
 # from ops.cobblerListSync import cobblerListSync
 
@@ -58,5 +59,12 @@ api.add_resource(GetGrouplessHost,"/host/GetGrouplessHost")
 # api.add_resource(UseHostGroupCreate,"/UseHostGroupCreate")
 
 
+#item
+api.add_resource(GetIteminfo,"/item/GetIteminfo")
+
 ##模板类
 api.add_resource(GetTemplate,"/template/GetTemplate")
+
+##trigger
+api.add_resource(GetTrigger,"/trigger/GetTrigger")
+api.add_resource(GetTriggerprototype,"/trigger/GetTriggerprototype")

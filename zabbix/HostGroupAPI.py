@@ -88,6 +88,15 @@ class HostGroupAbout(Zabbix_Api):
     print(tmp)
     return tmp
 
+  def UseGroupidGetName(self,auth,group_id):
+    method = "hostgroup.get"
+    params = {
+      "output": ["name",],
+      "groupids": group_id
+    }
+    hg_information = self.common_action(auth, method=method, params=params)
+    groupname = hg_information[0]["name"]
+    return groupname
 
   def UseGroupnameGetid(self,auth,hgname):
     method = "hostgroup.get"

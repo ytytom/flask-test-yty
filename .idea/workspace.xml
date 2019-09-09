@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80a092df-dce2-4342-8c04-37f69c40590e" name="Default Changelist" comment="监控集成">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="80a092df-dce2-4342-8c04-37f69c40590e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/zabbix/TriggerprototypeAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/logger.conf" beforeDir="false" afterPath="$PROJECT_DIR$/common/logger.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask-yty.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask-yty.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/emergency.py" beforeDir="false" afterPath="$PROJECT_DIR$/ops/emergency.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops/emergencyScheduler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ops/emergencyScheduler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/thread-count.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/thread-count.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zabbix/HostAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/HostAPI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zabbix/HostGroupAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/HostGroupAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zabbix/ItemAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/ItemAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zabbix/TriggerAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/zabbix/TriggerAPI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +20,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/flask_test_yty$ZabbixCommonAPI.coverage" NAME="ZabbixCommonAPI Coverage Results" MODIFIED="1565230229546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zabbix" />
-    <SUITE FILE_PATH="coverage/flask_test_yty$flask_test_yty.coverage" NAME="flask-test-yty Coverage Results" MODIFIED="1567488553028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/flask_test_yty$flask_test_yty.coverage" NAME="flask-test-yty Coverage Results" MODIFIED="1567837164992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask_test_yty$threading_count.coverage" NAME="threading-count Coverage Results" MODIFIED="1565857527209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/flask_test_yty$thread_count.coverage" NAME="thread-count Coverage Results" MODIFIED="1565857098683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/flask_test_yty$zabbixabout.coverage" NAME="zabbixabout Coverage Results" MODIFIED="1565512133379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/zabbix" />
@@ -32,16 +30,17 @@
     <session id="-1733342872">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.52" value="1" />
+          <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.82" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -50,7 +49,7 @@
           <entry key="conf" value="2" />
           <entry key="log" value="3" />
           <entry key="md" value="5" />
-          <entry key="py" value="80" />
+          <entry key="py" value="84" />
           <entry key="pyi" value="1" />
           <entry key="sql" value="1" />
         </counts>
@@ -59,7 +58,7 @@
         <counts>
           <entry key="Markdown" value="5" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="80" />
+          <entry key="Python" value="84" />
           <entry key="PythonStub" value="1" />
           <entry key="SQL" value="1" />
         </counts>
@@ -67,18 +66,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="conf" value="28" />
-          <entry key="dummy" value="41" />
+          <entry key="dummy" value="42" />
           <entry key="log" value="3" />
           <entry key="md" value="64" />
-          <entry key="py" value="8757" />
-          <entry key="txt" value="4" />
+          <entry key="py" value="9774" />
+          <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="64" />
-          <entry key="PLAIN_TEXT" value="76" />
-          <entry key="Python" value="8757" />
+          <entry key="PLAIN_TEXT" value="85" />
+          <entry key="Python" value="9774" />
         </counts>
       </usages-collector>
     </session>
@@ -88,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+            <state relative-caret-position="679">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#23#43#0" expanded="true" />
               </folding>
@@ -102,14 +101,56 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zabbix/HostAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1042">
-              <caret line="361" lean-forward="true" selection-start-line="361" selection-end-line="361" />
+            <state relative-caret-position="-1077">
+              <caret line="407" column="5" selection-start-line="407" selection-start-column="5" selection-end-line="407" selection-end-column="5" />
               <folding>
                 <element signature="e#15#26#0" expanded="true" />
-                <marker date="1567498169308" expanded="true" signature="4078:4083" ph="..." />
+                <marker date="1567662849829" expanded="true" signature="4078:4083" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zabbix/ItemAPI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <marker date="1568024409903" expanded="true" signature="180:674" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zabbix/TriggerAPI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="427">
+              <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <marker date="1568024777254" expanded="true" signature="1585:1588" ph="..." />
+                <marker date="1568024777254" expanded="true" signature="1683:1696" ph="..." />
+                <marker date="1568024777254" expanded="true" signature="1711:1716" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zabbix/TriggerprototypeAPI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <marker date="1567852295810" expanded="true" signature="171:174" ph="..." />
+                <marker date="1567852295810" expanded="true" signature="844:856" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,14 +159,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zabbix/HostGroupAPI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+            <state relative-caret-position="232">
+              <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
               <folding>
                 <element signature="e#15#68#0" expanded="true" />
-                <marker date="1567416538275" expanded="true" signature="1479:1483" ph="..." />
-                <marker date="1567416538275" expanded="true" signature="2668:2671" ph="..." />
-                <marker date="1567416538275" expanded="true" signature="3584:3587" ph="..." />
-                <marker date="1567416538275" expanded="true" signature="3698:3711" ph="..." />
+                <marker date="1567662480971" expanded="true" signature="1479:1483" ph="..." />
+                <marker date="1567662480971" expanded="true" signature="2273:2520" ph="..." />
+                <marker date="1567662480971" expanded="true" signature="2956:2959" ph="..." />
+                <marker date="1567662480971" expanded="true" signature="3872:3875" ph="..." />
+                <marker date="1567662480971" expanded="true" signature="3986:3999" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flask-yty.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="2440" column="66" selection-start-line="2440" selection-start-column="66" selection-end-line="2440" selection-end-column="66" />
+            <state relative-caret-position="325">
+              <caret line="2665" column="81" selection-start-line="2665" selection-start-column="76" selection-end-line="2665" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -210,7 +252,6 @@
         <option value="$PROJECT_DIR$/zabbix/TemplateAbout.py" />
         <option value="$PROJECT_DIR$/zabbix/AutoCreateHost.py" />
         <option value="$PROJECT_DIR$/zabbix/CommonZabbix.py" />
-        <option value="$PROJECT_DIR$/zabbix/ItemAPI.py" />
         <option value="$PROJECT_DIR$/zabbix/TemplateAPI.py" />
         <option value="$PROJECT_DIR$/zabbix/AddItemTragger.py" />
         <option value="$PROJECT_DIR$/zabbix/ChangeItemdelay.py" />
@@ -218,8 +259,12 @@
         <option value="$PROJECT_DIR$/PLAN.md" />
         <option value="$PROJECT_DIR$/test/thread-count.py" />
         <option value="$PROJECT_DIR$/zabbix/HostGroupAPI.py" />
-        <option value="$PROJECT_DIR$/router.py" />
         <option value="$PROJECT_DIR$/zabbix/HostAPI.py" />
+        <option value="$PROJECT_DIR$/zabbix/TriggerprototyprAPI.py" />
+        <option value="$PROJECT_DIR$/router.py" />
+        <option value="$PROJECT_DIR$/zabbix/TriggerprototypeAPI.py" />
+        <option value="$PROJECT_DIR$/zabbix/ItemAPI.py" />
+        <option value="$PROJECT_DIR$/zabbix/TriggerAPI.py" />
       </list>
     </option>
   </component>
@@ -229,11 +274,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="98" />
-    <option name="width" value="1446" />
-    <option name="height" value="840" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="318" />
+    <option name="y" value="68" />
+    <option name="width" value="1085" />
+    <option name="height" value="727" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -243,6 +288,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,7 +325,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,30 +512,46 @@
       <option name="project" value="LOCAL" />
       <updated>1566550315816</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="回去调下item">
+      <created>1567500586414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567500586414</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="98" width="1446" height="840" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24603175" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18443497" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36260623" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27765727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39938557" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32954547" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.20525657" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.203966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -524,12 +585,49 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="监控集成" />
-    <option name="LAST_COMMIT_MESSAGE" value="监控集成" />
+    <MESSAGE value="回去调下item" />
+    <option name="LAST_COMMIT_MESSAGE" value="回去调下item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -643,20 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zabbix/ItemAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zabbix/TriggerAPI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/AddItemTragger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -702,16 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/ChangeItemdelay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#15#68#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,44 +830,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding>
-            <element signature="e#23#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask-yty.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="2440" column="66" selection-start-line="2440" selection-start-column="66" selection-end-line="2440" selection-end-column="66" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/HostGroupAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="152" column="22" selection-start-line="152" selection-start-column="22" selection-end-line="152" selection-end-column="22" />
+        <state relative-caret-position="232">
+          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
           <folding>
             <element signature="e#15#68#0" expanded="true" />
-            <marker date="1567416538275" expanded="true" signature="1479:1483" ph="..." />
-            <marker date="1567416538275" expanded="true" signature="2668:2671" ph="..." />
-            <marker date="1567416538275" expanded="true" signature="3584:3587" ph="..." />
-            <marker date="1567416538275" expanded="true" signature="3698:3711" ph="..." />
+            <marker date="1567662480971" expanded="true" signature="1479:1483" ph="..." />
+            <marker date="1567662480971" expanded="true" signature="2273:2520" ph="..." />
+            <marker date="1567662480971" expanded="true" signature="2956:2959" ph="..." />
+            <marker date="1567662480971" expanded="true" signature="3872:3875" ph="..." />
+            <marker date="1567662480971" expanded="true" signature="3986:3999" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zabbix/HostAPI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1042">
-          <caret line="361" lean-forward="true" selection-start-line="361" selection-end-line="361" />
+        <state relative-caret-position="-1077">
+          <caret line="407" column="5" selection-start-line="407" selection-start-column="5" selection-end-line="407" selection-end-column="5" />
           <folding>
             <element signature="e#15#26#0" expanded="true" />
-            <marker date="1567498169308" expanded="true" signature="4078:4083" ph="..." />
+            <marker date="1567662849829" expanded="true" signature="4078:4083" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask-yty.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="2665" column="81" selection-start-line="2665" selection-start-column="76" selection-end-line="2665" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zabbix/TriggerprototypeAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1567852295810" expanded="true" signature="171:174" ph="..." />
+            <marker date="1567852295810" expanded="true" signature="844:856" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#23#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zabbix/ItemAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1568024409903" expanded="true" signature="180:674" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zabbix/TriggerAPI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1568024777254" expanded="true" signature="1585:1588" ph="..." />
+            <marker date="1568024777254" expanded="true" signature="1683:1696" ph="..." />
+            <marker date="1568024777254" expanded="true" signature="1711:1716" ph="..." />
           </folding>
         </state>
       </provider>
